@@ -9,12 +9,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Web Design Mastery | Responsive Portfolio</title>
   </head>
   <body>
     <nav>
       <div class="nav__content">
-        <div class="logo"><a href="#">Mitchell</a></div>
+        <div class="logo"><a href="#">Qonda</a></div>
         <label for="check" class="checkbox">
           <i class="ri-menu-line"></i>
         </label>
@@ -22,7 +23,6 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Resume</a></li>
           <li><a href="#">Portfolio</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -41,9 +41,8 @@
             responsive, and user-friendly websites. I've worked on a variety of
             web projects.
           </p>
-          <div class="action__btns">
-            <button class="hire__me">Hire Me</button>
-            <button class="portfolio">Portfolio</button>
+          <div class="animated-text-container">
+            <span class="animated-text"></span>
           </div>
         </div>
         <div class="image">
@@ -51,5 +50,29 @@
         </div>
       </div>
     </section>
+    <script>
+        const texts = ["Web Developer", "Creative Coder", "Problem Solver"];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+      
+        (function type() {
+          if (count === texts.length) {
+            count = 0;
+          }
+          currentText = texts[count];
+          letter = currentText.slice(0, ++index);
+      
+          document.querySelector(".animated-text").textContent = letter;
+          if (letter.length === currentText.length) {
+            count++;
+            index = 0;
+            setTimeout(type, 1000); // Pause before typing the next text
+          } else {
+            setTimeout(type, 150); // Typing speed
+          }
+        })();
+    </script>
   </body>
 </html>

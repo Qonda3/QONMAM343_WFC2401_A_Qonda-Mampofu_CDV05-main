@@ -174,9 +174,48 @@ ul li a:hover {
 }
 
 .image img {
-  width: min(25rem, 90%);
+  width: min(20rem, 90%);
+  height: 20rem;
   border-radius: 100%;
+  object-fit: cover;
 }
+
+.animated-text-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0rem;
+    margin-left: 0rem; 
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .animated-text {
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--primary-color);
+    }
+  }
 
 @media (width < 750px) {
   nav .checkbox {
