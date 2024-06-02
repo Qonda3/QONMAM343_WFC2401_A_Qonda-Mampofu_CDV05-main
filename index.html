@@ -28,7 +28,7 @@
         </ul>
       </div>
     </nav>
-    <section class="section">
+    <section class="section" id="home-section">
       <div class="section__container">
         <div class="content">
           <p class="subtitle">HELLO</p>
@@ -50,6 +50,25 @@
         </div>
       </div>
     </section>
+    <section class="section about" id="about-section">
+        <div class="section__container">
+            <div class="animation">
+                <svg class="line-animation" viewBox="0 0 1500 1000" preserveAspectRatio="xMidYMid meet">
+                  <path d="M100,500 C300,100 700,900 1000,500 S1300,100 1400,500" stroke="var(--primary-color)" stroke-width="5" fill="none" stroke-dasharray="1500" stroke-dashoffset="1500"></path>
+                </svg>
+            </div>
+            <div class="content">
+                <p class="subtitle">ABOUT ME</p>
+                <h2 class="title">Who Am I?</h2>
+                <p class="description">
+                I am a passionate web developer with a love for creating beautiful and intuitive websites. With a strong background in front-end development and a keen eye for design, I strive to deliver exceptional user experiences. My expertise lies in HTML, CSS, JavaScript, and various front-end frameworks and libraries.
+                </p>
+                <p class="description">
+                I am constantly learning and keeping up with the latest web development trends and technologies. My goal is to create websites that are not only visually appealing but also responsive, accessible, and optimized for performance.
+                </p>
+            </div>
+        </div>
+      </section>
     <script>
         const texts = ["Web Developer", "Creative Coder", "Problem Solver"];
         let count = 0;
@@ -73,6 +92,39 @@
             setTimeout(type, 150); // Typing speed
           }
         })();
+
+            // Get the "About" link element
+            const aboutLink = document.querySelector('nav ul li:nth-child(2) a');
+
+        // Get the "About Me" section element
+        const aboutSection = document.getElementById('about-section');
+
+        // Function to handle smooth scrolling and animation
+        function handleAboutLinkClick(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Scroll smoothly to the "About Me" section
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add click event listener to the "About" link
+        aboutLink.addEventListener('click', handleAboutLinkClick);
+        // Get the "Home" link element
+        const homeLink = document.querySelector('nav ul li:nth-child(1) a');
+
+        // Get the home section element
+        const homeSection = document.getElementById('home-section');
+
+        // Function to handle smooth scrolling to the home section
+        function handleHomeLinkClick(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Scroll smoothly to the home section
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add click event listener to the "Home" link
+        homeLink.addEventListener('click', handleHomeLinkClick);
     </script>
   </body>
 </html>

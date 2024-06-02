@@ -256,3 +256,83 @@ ul li a:hover {
     margin: auto;
   }
 }
+
+.about {
+    background-color: #ffffff;
+  }
+  
+  .about .section__container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  
+  .about .content {
+    text-align: left;
+  }
+  
+  .about .animation {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .line-animation {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line-animation path {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw 10s ease-in-out forwards;
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .about .section__container {
+      grid-template-columns: 1fr;
+    }
+  
+    .about .animation {
+      grid-area: 2/1/3/2;
+      margin: 2rem auto;
+    }
+  }
+  /* Existing CSS */
+/* ... */
+
+.about .section__container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  
+  .about .content {
+    order: 2;
+    text-align: left;
+  }
+  
+  .about .animation {
+    order: 1;
+  }
+  
+  @media (max-width: 750px) {
+    .about .section__container {
+      grid-template-columns: 1fr;
+    }
+  
+    .about .content {
+      order: 1;
+      text-align: center;
+    }
+  
+    .about .animation {
+      order: 2;
+      margin: 2rem auto;
+    }
+  }
