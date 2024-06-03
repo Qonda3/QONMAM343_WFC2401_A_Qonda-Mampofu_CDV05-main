@@ -436,3 +436,14 @@ ul li a:hover {
   .social-link:hover {
     color: var(--primary-color);
   }
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+  }
+  
+  .project:hover .project-title {
+    color: var(--hover-color);
+  }
