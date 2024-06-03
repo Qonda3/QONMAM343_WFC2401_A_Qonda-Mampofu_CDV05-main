@@ -336,3 +336,66 @@ ul li a:hover {
       margin: 2rem auto;
     }
   }
+  .portfolio .section__container {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-details {
+    position: relative;
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+  
+  .button-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  .project-technologies {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: var(--primary-color-dark);
+  }
