@@ -84,7 +84,7 @@
                   <h3 class="project-title">Cache Bank Landing Page </h3>
                   <p class="project-description">Our project aims to develop a Cache Bank Business Landing Page portfolio piece that effectively demonstrates our skills in web development while prioritizing user-centric design principles, creating a visually stunning and user-friendly online experience for Cache Bank's customers.</p>
                   <p class="project-technologies">Technologies Used: HTML, CSS, Tailwind</p>
-                  <a href="link/to/project1" target="_blank" class="project-link">View Project</a>
+                  <a href="https://soft-baklava-14af2c.netlify.app/" target="_blank" class="project-link">View Project</a>
                 </div>
               </div>
       
@@ -98,7 +98,7 @@
                   <p class="project-description">The project aims to provide a user-friendly and efficient platform for agile teams to manage tasks, collaborate effectively, and track project progress seamlessly.</p>
                   <p class="project-technologies">Technologies Used: HTML5, CSS, JavaScript</p>
                   <div class="button-container">
-                    <a href="link/to/project2" target="_blank" class="project-link">View Project</a>
+                    <a href="https://jsltask.netlify.app/" target="_blank" class="project-link">View Project</a>
                   </div>
                 </div>
               </div>
@@ -106,7 +106,7 @@
           </div>
         </div>
     </section>
-    <footer>
+    <footer id="contact-section">
         <div class="footer__container">
           <div class="contact">
             <h3>Contact Me</h3>
@@ -148,8 +148,8 @@
           }
         })();
 
-            // Get the "About" link element
-            const aboutLink = document.querySelector('nav ul li:nth-child(2) a');
+        // Get the "About" link element
+         const aboutLink = document.querySelector('nav ul li:nth-child(2) a');
 
         // Get the "About Me" section element
         const aboutSection = document.getElementById('about-section');
@@ -180,6 +180,40 @@
 
         // Add click event listener to the "Home" link
         homeLink.addEventListener('click', handleHomeLinkClick);
+
+        // Get the "Portfolio" link element
+        const portfolioLink = document.querySelector('nav ul li:nth-child(3) a');
+
+        // Get the portfolio section element
+        const portfolioSection = document.getElementById('portfolio-section');
+
+        // Function to handle smooth scrolling to the portfolio section
+        function handlePortfolioLinkClick(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Scroll smoothly to the portfolio section
+        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add click event listener to the "Portfolio" link
+        portfolioLink.addEventListener('click', handlePortfolioLinkClick);
+
+        // Get the "Contact" link element
+        const contactLink = document.querySelector('nav ul li:nth-child(4) a');
+
+        // Get the contact section element
+        const contactSection = document.getElementById('contact-section');
+
+        // Function to handle smooth scrolling to the contact section
+        function handleContactLinkClick(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Scroll smoothly to the contact section
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add click event listener to the "Contact" link
+        contactLink.addEventListener('click', handleContactLinkClick);
     </script>
   </body>
 </html>
