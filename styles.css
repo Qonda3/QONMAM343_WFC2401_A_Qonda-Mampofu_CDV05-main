@@ -365,22 +365,30 @@ ul li a:hover {
   }
   
   .project-details {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
-    padding-bottom: 3rem;
   }
   
-  .button-container {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-  }
   .project-title {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
+
+  .project-info {
+    flex: 1;
+  }
   
+  .button-container {
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+
+  .project-info-bottom {
+    margin-bottom: 3rem;
+  }
+
   .project-description {
     color: var(--text-light);
     margin-bottom: 1rem;
